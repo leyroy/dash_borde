@@ -12,8 +12,3 @@ body html {
    font-family: "Poppins", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
    box-sizing: border-box;
 }
-
-.activities {
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
-}

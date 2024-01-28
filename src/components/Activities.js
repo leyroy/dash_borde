@@ -48,7 +48,7 @@ const colors = [
 
 function Activities() {
 	return (
-		<div className=" pl-4 activities gap-3 p-7 h-full w-full">
+		<div className=" pl-4 activities grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 p-7 h-full w-full">
 			<div className=" row-span-5 rounded-sm bg-red-500">
 				<h1 className="text-lg font-bold px-4">
 					Pending post for review
@@ -81,34 +81,31 @@ function Activities() {
 						/>
 					</div>
 				</div>
-				<div className="flex justify-between px-5 items-center">
+				<div className="flex p-2 justify-between px-5 items-center">
 					<p className="text-sky-600 text-lg font-semibold">
-						these and 12 more
+						these and 12 others more
 					</p>
-					<button className="mr-8 px-4 py-2 font-bold bg-sky-600 bg-opacity-30 rounded-full">
+					<button className="mr-8 whitespace-nowrap px-4 py-2 font-bold bg-sky-600 bg-opacity-30 rounded-md">
 						Review All
 					</button>
 				</div>
 			</div>
 			<div className="bg-zinc-400 row-span-5 "> helo </div>
 			<div className="bg-green-400 row-span-5 "> helo </div>
-			<div className="col-span-full flex">
+			<div className="col-span-full flex flex-col md:flex-row">
 				<div className=" items-center flex-col flex justify-center flex-1 w-full">
-					<h1 className="text-white font-medium text-2xl py-4">
+					<h1 className="text-gray-900 font-medium text-2xl py-4">
 						Viewed Statictis
 					</h1>
-					<div className=" text-lg font-bold">
+					<div className=" text-lg w-full h-full font-bold">
 						<ResponsiveContainer
-							width={660}
-							height={390}
+							width="100%"
+							height="100%"
 						>
 							<LineChart
 								data={most_view_post}
-								height={180}
-								width={600}
-								margin={{
-									left: 0,
-								}}
+								height="100%"
+								width="100%"
 							>
 								<CartesianGrid />
 								<XAxis dataKey="category" />
@@ -124,21 +121,21 @@ function Activities() {
 						</ResponsiveContainer>
 					</div>
 				</div>
-				<div className="flex justify-center items-center flex-col h-full flex-1 w-full">
-					<h1 className="text-white font-medium text-2xl py-4">
+				<div className="flex justify-between gap-3 flex-col items-center  h-full flex-1 w-full">
+					<h1 className="text-gray-900 font-medium text-2xl py-4">
 						Viewed Statictis
 					</h1>
-					<div className="text-[#fa0092] w-full text-lg font-bold ">
+					<div className=" m-auto w-full h-full text-lg font-bold ">
 						<BarChart
-							className="text-[#fa0092]"
-							width={600}
-							height={370}
+							width={500}
+							height={400}
 							data={most_view_post}
-							margin={{
-								right: 60,
-							}}
 						>
-							<CartesianGrid />
+							<CartesianGrid
+								height="100%"
+								width="100%"
+							/>
+
 							<XAxis
 								color="#fa009"
 								dataKey="category"

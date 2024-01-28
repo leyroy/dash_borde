@@ -1,16 +1,17 @@
 import React from "react";
-import { Home } from "../pages";
+import { Dashbord } from "../pages";
 import { NavBar, SideBar } from ".";
 
-export default function Layout() {
+export default function Layout({ setIsAuth }) {
 	return (
-		<div className="w-full bg-white pt-12 flex flex-col items-center justify-center">
-			<NavBar />
+		<div className="w-full bg-gray-300 pt-12 flex flex-col items-center justify-center">
+			<NavBar setIsAuth={setIsAuth} />
 			<div className="w-full flex">
-				<SideBar />
-				<Home />
+				<div className="sticky">
+					<SideBar />
+				</div>
+				<Dashbord />
 			</div>
-			{/* <Home  /> */}
 			<div className="footer">Footer</div>
 		</div>
 	);

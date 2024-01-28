@@ -2,7 +2,10 @@ import React from "react";
 
 export default function SideBar() {
 	return (
-		<div className="sticky h-screen bg-teal-800 w-auto border-t border-black lg:p-3 ">
+		<div
+			className="fixed top-12
+		 bottom-0 px-5 bg-teal-800 w-auto border-t border-black lg:p-3 "
+		>
 			<div className="w-full ">
 				<div className="border-b flex flex-col gap-1 w-full border-black  ">
 					<h1 className="font-medium text-xl mb-2">Main</h1>
@@ -16,12 +19,12 @@ export default function SideBar() {
 				<div className="border-b flex flex-col gap-1 w-full border-black py-3  ">
 					<h1 className="font-medium text-xl mb-2">List</h1>
 
-					<div className=" text-lg font-medium flex flex-col cursor-pointer px-4">
-						<span className="text-gray-900 ">Uers</span>
-						<span className="text-gray-900 ">Profile</span>
-						<span className="text-gray-900 ">Products</span>
-						<span className="text-gray-900 ">Oders</span>
-						<span className="text-gray-900 ">Posts</span>
+					<div className=" text-lg text-gray-900 font-medium flex flex-col cursor-pointer px-4">
+						<span>Uers</span>
+						<span>Profile</span>
+						<span>Products</span>
+						<span>Oders</span>
+						<span>Posts</span>
 					</div>
 				</div>
 			</div>
